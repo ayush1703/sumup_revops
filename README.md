@@ -48,13 +48,15 @@ Try running the following commands:
 
 ### Executive Summary from the analysis
 The sales lead and funnel data for customers who purchased Sumup devices in 2023 were analysed to uncover top insights and identify areas for performance improvement. The objective is to understand the best and worst-performing acquisition channels, evaluate the sales funnel, and identify potential bottlenecks impacting lead times. 
+
 Key Insights
-The direct sales channel consistently shows high customer acquisition and higher lifetime value (LTV) across all markets. Notably, the UK and Germany exhibit strong performance in this channel.
-The web channel is the worst performer, with a low LTV to customer acquisition cost (CAC) ratio of 2.66 and an average LTV per customer of only 245 euros, just 3% of that achieved through direct sales.
-Hotels exhibit the highest total LTV, LTV per customer, and LTV to CAC ratio, marking them as a premium segment requiring exceptional sales and onboarding experiences.
-Food trucks and restaurants also show high LTV per customer with comparatively lower CAC, making them valuable segments to focus on.
-The overall average lead to live time is 164 days, skewed by outliers exceeding 350 days. Excluding outliers reduces this to 4.8 days.
-Top categories with the lowest lead times (excluding outliers) are hotels, beauty, and restaurants.
+1. The direct sales channel consistently shows high customer acquisition and higher lifetime value (LTV) across all markets. Notably, the UK and Germany exhibit strong performance in this channel.
+2. The web channel is the worst performer, with a low LTV to customer acquisition cost (CAC) ratio of 2.66 and an average LTV per customer of only 245 euros, just 3% of that achieved through direct sales.
+3. Hotels exhibit the highest total LTV, LTV per customer, and LTV to CAC ratio, marking them as a premium segment requiring exceptional sales and onboarding experiences.
+4. Food trucks and restaurants also show high LTV per customer with comparatively lower CAC, making them valuable segments to focus on.
+5. The overall average lead to live time is 164 days, skewed by outliers exceeding 350 days. Excluding outliers reduces this to 4.8 days.
+6. Top categories with the lowest lead times (excluding outliers) are hotels, beauty, and restaurants.
+
 Based on the insights, we can align with the GTM strategy team to come up with an action plan on improving the sales performance and reducing lead time. 
 
 
