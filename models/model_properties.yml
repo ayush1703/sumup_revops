@@ -1,0 +1,42 @@
+version: 2
+
+models:
+- name: financials
+  description: Contains financical details of the acquired custoemrs
+  columns:
+    - name: customer_id
+      tests:
+        - not_null
+    - name: device_id
+      tests:
+        - not_null
+    - name: cac
+      tests:
+        - check_gt_0
+- name: funnel
+  description: Contains funnel timestamps of each lead in the sales funnel
+  columns:
+    - name: sales_email
+      tests:
+        - not_null
+    - name: live_date
+      tests:
+        - check_cols:
+            column_name2: lead_creation_date
+- name: sales
+  description: Stores acquistion month for each customer
+  columns:
+    - name: customer_id
+      tests:
+        - not_null
+- name: store
+  description: Shows type of customer and when store was created
+  columns:
+    - name: customer_id
+      tests:
+        - not_null
+  
+      
+    
+    
+    
