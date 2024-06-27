@@ -5,6 +5,8 @@ Welcome to the Sum Up Revenue operation analytics dbt project!
 2. Intermediate Layer: Aggregates and transforms data into data marts: Customer Financials, Funnel Performance, Sales reps performance
 3. Analysis Layer: SQL queries to answer business questions: Best channel, Worst channel, Top Sales Rep, Lead time
 
+Models in Staging layer and intermediate layer are designed to load in Incremental way so that scaling the model with million of rows is possible.
+
 ![alt text](<dbt model dag.png>)
 
 ### Solution implementation Step by step guide to run the project

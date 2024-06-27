@@ -1,7 +1,7 @@
 {{ config(
     materialized='incremental',
     schema='intermediate',
-    unique_key=['customer_id','country','channel','typology','acquisition_month']
+    unique_key=['customer_id','country','channel','typology','acquisition_month']  --no unique key and all columns used in aggregation are required
 ) }}
 
 WITH customer_financials AS (
@@ -14,14 +14,14 @@ WITH customer_financials AS (
         cac
     FROM {{ ref('financials') }}
 ),
-customer_features AS (
+customer_features AS (          --CTE to enrich country and typology
     SELECT
         customer_id,
         country,
         typology
     FROM {{ ref('store') }}
     UNION
-    SELECT
+    SELECT                      --union with other dataset as store data does not enrish all customer IDs
         customer_id,
         country,
         typology
@@ -43,7 +43,7 @@ SELECT
     sum(customer_financials.ltv) as total_ltv,
     sum(customer_financials.cac) as total_cac,
     avg(customer_financials.cac) as avg_cac,
-    sum(customer_financials.ltv)/sum(customer_financials.cac) as ltv_ratio,
+    sum(customer_financials.ltv)/sum(customer_financials.cac) as ltv_ratio,         --used as proxy for ROI
     '{{ run_started_at.strftime("%Y-%m-%d") }}' as dw_created_at
 FROM customer_financials
 LEFT JOIN customer_features on customer_features.customer_id = customer_financials.customer_id

@@ -1,7 +1,7 @@
 {{ config(materialized='incremental', schema='staging', unique_key=['customer_id','sales_email']) }}
 
 
-WITH import_csv AS (
+WITH import_csv AS (   --CTE to load CSV data from funnel.csv
         SELECT * FROM read_csv_auto('../funnel.csv')
     )
 SELECT

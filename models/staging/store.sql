@@ -1,13 +1,13 @@
 {{ config(materialized='incremental', schema='staging' , unique_key=['customer_id','created_at']) }}
 
 
-WITH import_csv AS (
+WITH import_csv AS (        --CTE to load CSV data from store.csv
         SELECT * FROM read_csv_auto('../store.csv', normalize_names=True)
     )
 SELECT
     customer_id,
     country,
-    strptime(created_at, '%m/%d/%Y %I:%M:%S') as created_at,
+    strptime(created_at, '%m/%d/%Y %I:%M:%S') as created_at,        --added timestamp format to set column in data model as datetime
     typology,
     '{{ run_started_at.strftime("%Y-%m-%d") }}' as dw_created_at
 FROM import_csv

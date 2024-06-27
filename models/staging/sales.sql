@@ -1,7 +1,7 @@
 {{ config(materialized='incremental', schema='staging', unique_key=['customer_id','channel','acquisition_month'] ) }}
 
 
-WITH import_csv AS (
+WITH import_csv AS (            --CTE to load CSV data from sales.csv
         SELECT * FROM read_csv_auto('../sales.csv')
     )
 SELECT
