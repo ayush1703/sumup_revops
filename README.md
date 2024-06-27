@@ -1,9 +1,9 @@
 Welcome to the Sum Up Revenue operation analytics dbt project!
 
 ### Data Model Design:
-Staging Layer: Loads raw data from CSV files: Financials, FUnnel, Sales and Store
-Intermediate Layer: Aggregates and transforms data into data marts: Customer Financials, Funnel Performance, Sales reps performance
-Analysis Layer: SQL queries to answer business questions: Best channel, Worst channel, Top Sales Rep, Lead time
+1. Staging Layer: Loads raw data from CSV files: Financials, FUnnel, Sales and Store
+2. Intermediate Layer: Aggregates and transforms data into data marts: Customer Financials, Funnel Performance, Sales reps performance
+3. Analysis Layer: SQL queries to answer business questions: Best channel, Worst channel, Top Sales Rep, Lead time
 
 ![alt text](<dbt model dag.png>)
 
